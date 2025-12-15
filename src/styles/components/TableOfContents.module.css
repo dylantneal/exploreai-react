@@ -1,0 +1,93 @@
+/* ============================================
+   Table of Contents - Sticky Navigation
+   Professional, minimal design
+   ============================================ */
+
+.toc {
+  padding: var(--spacing-lg);
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.tocTitle {
+  font-family: var(--font-family-display);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-md) 0;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tocItem {
+  margin-bottom: 2px;
+}
+
+.tocItemNested {
+  margin-left: var(--spacing-md);
+}
+
+.tocLink {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-sm);
+  font-size: 13px;
+  font-weight: 450;
+  color: var(--color-text-secondary);
+  text-align: left;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1.4;
+}
+
+.tocLink:hover {
+  color: var(--color-primary);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.tocLink.active {
+  color: var(--color-secondary);
+  background: rgba(0, 191, 255, 0.08);
+  font-weight: 550;
+}
+
+/* Scrollbar styling */
+.toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.toc::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.toc::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.toc::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Hide on mobile - will use different navigation */
+@media (max-width: 1024px) {
+  .toc {
+    display: none;
+  }
+}
+

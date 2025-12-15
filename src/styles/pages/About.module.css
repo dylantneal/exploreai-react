@@ -1,0 +1,151 @@
+/* Overview Section */
+.overview {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.overview h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.lead {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.overview p {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* Methodology Section */
+.methodology {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.methodology h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.methodCard {
+  background: var(--color-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.methodCard h3 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.methodCard p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Team Section */
+.team {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.teamCard {
+  background: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.teamCard h3 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.role {
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+}
+
+.teamCard p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Sources Section */
+.sources {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sources h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+.sourceGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.sourceLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: background var(--transition-fast);
+}
+
+.sourceLink:hover {
+  background: rgba(0, 191, 255, 0.2);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .methodGrid {
+    grid-template-columns: 1fr;
+  }
+}

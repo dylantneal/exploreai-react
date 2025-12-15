@@ -1,0 +1,131 @@
+/* ============================================
+   Chart Component Styles
+   Clean, minimal data visualization styling
+   ============================================ */
+
+.chartContainer {
+  margin: var(--spacing-xl) 0 var(--spacing-2xl);
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.chartHeader {
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
+}
+
+.chartTitle {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.chartWrapper {
+  padding: var(--spacing-sm) var(--spacing-md);
+  position: relative;
+}
+
+/* Hide modebar by default, show on hover */
+.chartWrapper :global(.modebar) {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.chartWrapper:hover :global(.modebar) {
+  opacity: 0.7;
+}
+
+.chartWrapper :global(.modebar):hover {
+  opacity: 1;
+}
+
+/* Modebar styling */
+.chartWrapper :global(.modebar-btn) {
+  font-size: 14px !important;
+}
+
+.chartWrapper :global(.modebar-group) {
+  padding: 4px !important;
+}
+
+.chartFooter {
+  padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg);
+  background: rgba(0, 0, 0, 0.01);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.chartDescription {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.chartInsight {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.06) 0%, rgba(27, 32, 76, 0.04) 100%);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-secondary);
+}
+
+.insightLabel {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.chartInsight p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.chartSource {
+  margin: var(--spacing-md) 0 0;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
+.chartSource a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.chartSource a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chartContainer {
+    margin: var(--spacing-lg) calc(-1 * var(--spacing-md));
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .chartHeader,
+  .chartFooter {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .chartTitle {
+    font-size: var(--font-size-base);
+  }
+}
+

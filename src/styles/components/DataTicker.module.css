@@ -1,0 +1,76 @@
+/* Data Ticker Component - Clinical, Clean Design */
+.ticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background: rgba(10, 15, 20, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  min-width: 320px;
+}
+
+.factContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100px;
+  justify-content: center;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.value {
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  letter-spacing: -0.02em;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.context {
+  font-size: var(--font-size-sm);
+  color: var(--color-secondary);
+  margin-top: var(--spacing-sm);
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.source {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: var(--font-family-body);
+  letter-spacing: 0.03em;
+  margin-top: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+  .ticker {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .value {
+    font-size: 1.75rem;
+  }
+}
+

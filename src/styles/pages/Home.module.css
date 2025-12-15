@@ -1,0 +1,285 @@
+/* Hero Title Wrapper */
+.heroTitleWrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0;
+}
+
+/* Hero Logo */
+.heroLogoPrimary {
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  color: var(--color-text-light);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+
+.heroLogoAccent {
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  color: var(--color-secondary);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* Hero Actions */
+.heroActions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Mission Section */
+.mission {
+  position: relative;
+  background: linear-gradient(180deg, #0d1117 0%, var(--color-primary) 50%, #0a0a14 100%);
+  padding: var(--spacing-3xl) var(--spacing-md);
+  overflow: hidden;
+}
+
+.mission::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+}
+
+.missionInner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.missionText {
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin: 0 0 var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.methodology {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2xl);
+  flex-wrap: wrap;
+}
+
+.methodItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.methodIcon {
+  color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+}
+
+.methodTitle {
+  display: inline;
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.methodDesc {
+  display: inline;
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.methodDesc::before {
+  content: ' · ';
+}
+
+/* Focus Areas */
+.focusGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.focusCard {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.focusCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.focusCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}
+
+.focusCard:hover::before {
+  transform: scaleX(1);
+}
+
+.focusHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-lg);
+}
+
+.focusIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+  transition: background 0.2s ease;
+}
+
+.focusCard:hover .focusIcon {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.focusStat {
+  text-align: right;
+}
+
+.statValue {
+  display: block;
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.statLabel {
+  display: block;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.focusTitle {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.focusDescription {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: var(--spacing-lg);
+}
+
+.focusLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-secondary);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  transition: gap var(--transition-fast);
+  margin-top: auto;
+}
+
+.focusCard:hover .focusLink {
+  gap: var(--spacing-sm);
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  font-size: var(--font-size-2xl);
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ctaText {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .focusGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .methodology {
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .focusGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .missionText {
+    font-size: var(--font-size-lg);
+  }
+
+  .methodology {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+
+  .focusHeader {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .focusStat {
+    text-align: left;
+  }
+}

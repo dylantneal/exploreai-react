@@ -1,0 +1,145 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #0d1117;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.headerInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.logoText {
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+.logoPrimary {
+  color: var(--color-text-light);
+  font-weight: 300;
+}
+
+.logoAccent {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-md);
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  font-family: 'Inter', var(--font-family-body), sans-serif;
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-text-light);
+  background-color: rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+}
+
+.navLink.active {
+  color: var(--color-secondary);
+  background-color: rgba(0, 191, 255, 0.08);
+}
+
+/* Mobile menu button */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navLink {
+    font-size: 0.75rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .navList {
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-primary);
+    padding: var(--spacing-md);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .navLink {
+    display: block;
+    font-size: var(--font-size-base);
+    padding: var(--spacing-md);
+  }
+}
+

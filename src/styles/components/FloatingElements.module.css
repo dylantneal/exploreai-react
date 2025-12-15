@@ -1,0 +1,21 @@
+/* Floating Elements Background */
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.symbol {
+  position: absolute;
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  color: var(--color-secondary);
+  user-select: none;
+  text-shadow: 0 0 20px currentColor;
+  transition: opacity 0.3s ease;
+}
+

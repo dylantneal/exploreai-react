@@ -1,0 +1,728 @@
+/* ============================================
+   Article Page Styles
+   Professional research article layout
+   ============================================ */
+
+/* Page Container with Background Animation */
+.articlePage {
+  position: relative;
+  min-height: 100vh;
+  background: white;
+}
+
+/* Layout Structure */
+.articleWrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: var(--spacing-2xl);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  padding-top: calc(var(--header-height) + var(--spacing-xl));
+}
+
+.articleMain {
+  flex: 1;
+  max-width: 800px;
+  min-width: 0;
+}
+
+.articleSidebar {
+  flex-shrink: 0;
+  width: 220px;
+  align-self: flex-start;
+  position: sticky;
+  top: calc(var(--header-height) + var(--spacing-lg));
+}
+
+/* Back Link */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+/* ============================================
+   Article Header
+   ============================================ */
+.articleHeader {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.focusArea {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.articleTitle {
+  font-family: var(--font-family-display);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.articleMeta {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lastUpdated {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  margin-top: var(--spacing-md);
+}
+
+/* ============================================
+   Executive Summary
+   ============================================ */
+.executiveSummary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0D0D1A 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+  color: white;
+}
+
+.summaryTitle {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.summaryPoints {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-xl) 0;
+}
+
+.summaryPoints li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.summaryPoints li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+}
+
+.summaryStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summaryStat {
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.statLabel {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* ============================================
+   Article Content Typography
+   ============================================ */
+.articleContent {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.articleContent h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: var(--spacing-3xl) 0 var(--spacing-md) 0;
+  padding-top: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.articleContent h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.articleContent h2 svg {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.articleContent h3 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: var(--spacing-xl) 0 var(--spacing-sm) 0;
+}
+
+.articleContent p {
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.articleContent ul,
+.articleContent ol {
+  margin: 0 0 var(--spacing-lg) 0;
+  padding-left: var(--spacing-xl);
+}
+
+.articleContent li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.7;
+}
+
+.articleContent a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.articleContent a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Section Divider
+   ============================================ */
+.sectionDivider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.08) 20%, rgba(0, 0, 0, 0.08) 80%, transparent 100%);
+  margin: var(--spacing-3xl) 0;
+}
+
+/* ============================================
+   Section Header (Part labels)
+   ============================================ */
+.sectionHeader {
+  margin: var(--spacing-3xl) 0 var(--spacing-xl) 0;
+}
+
+.sectionNumber {
+  display: inline-block;
+  font-family: var(--font-family-display);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.sectionHeading {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sectionLead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin: var(--spacing-md) 0 0 0;
+  line-height: 1.7;
+}
+
+/* ============================================
+   Info Box (Science explanations)
+   ============================================ */
+.infoBox {
+  background: rgba(0, 191, 255, 0.04);
+  border-left: 3px solid var(--color-secondary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.infoBox h3 {
+  font-size: var(--font-size-base);
+  margin: 0 0 var(--spacing-sm) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.infoBox p {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.infoBox p:not(:last-child) {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   Warning Box
+   ============================================ */
+.warningBox {
+  display: flex;
+  gap: var(--spacing-md);
+  background: rgba(231, 76, 60, 0.04);
+  border-left: 3px solid #E74C3C;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.warningBox > svg {
+  flex-shrink: 0;
+  color: #E74C3C;
+  margin-top: 2px;
+}
+
+.warningBox strong {
+  display: block;
+  color: #C0392B;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.warningBox p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+/* ============================================
+   Data Context Box
+   ============================================ */
+.dataContext {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+.dataContext h3 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.dataContext p {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* ============================================
+   Tipping Points Grid
+   ============================================ */
+.tippingPointsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.tippingPointCard {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--color-secondary);
+}
+
+.tippingPointCard.riskCritical {
+  border-left-color: #922B21;
+}
+
+.tippingPointCard.riskHigh {
+  border-left-color: #E74C3C;
+}
+
+.tippingPointCard.riskMedium {
+  border-left-color: #F39C12;
+}
+
+.tpHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.tpHeader h4 {
+  font-family: var(--font-family-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.tpStatus {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--color-text-secondary);
+}
+
+.riskCritical .tpStatus {
+  background: rgba(146, 43, 33, 0.1);
+  color: #922B21;
+}
+
+.riskHigh .tpStatus {
+  background: rgba(231, 76, 60, 0.1);
+  color: #C0392B;
+}
+
+.tpThreshold {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  font-size: 13px;
+}
+
+.tpThreshold .label {
+  color: var(--color-text-secondary);
+}
+
+.tpThreshold .value {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.tpConsequence {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   Feedback Loop Box
+   ============================================ */
+.feedbackLoop {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+.feedbackLoop h4 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.feedbackLoop ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedbackLoop li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.feedbackLoop li::before {
+  content: '↻';
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+}
+
+.feedbackLoop li strong {
+  color: var(--color-primary);
+}
+
+.feedbackLoop li:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Takeaways Section
+   ============================================ */
+.takeaways {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0D0D1A 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+  color: white;
+}
+
+.takeaways h2 {
+  font-size: var(--font-size-lg);
+  color: white !important;
+  margin: 0 0 var(--spacing-lg) 0 !important;
+  padding: 0 !important;
+}
+
+.takeaways ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.takeaways li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.takeaways li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+}
+
+.takeaways li strong {
+  color: white;
+}
+
+.takeaways li:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Methodology Section
+   ============================================ */
+.methodology {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+}
+
+.methodology h2 {
+  font-size: var(--font-size-lg);
+  margin: 0 0 var(--spacing-md) 0 !important;
+  padding: 0 !important;
+}
+
+.methodology p {
+  font-size: var(--font-size-sm);
+}
+
+.methodology p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Resources Section
+   ============================================ */
+.resources {
+  margin: var(--spacing-2xl) 0;
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.resources h2 {
+  font-size: var(--font-size-lg);
+  margin: 0 0 var(--spacing-md) 0 !important;
+  padding: 0 !important;
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm) var(--spacing-lg);
+}
+
+.resources li {
+  margin: 0;
+}
+
+.resources a {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+/* ============================================
+   Metrics Grid (for executive summary)
+   ============================================ */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.metricCard {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.metricIcon {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.metricValue {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.metricLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 2px;
+}
+
+.metricDelta {
+  font-size: 10px;
+  color: var(--color-secondary);
+  margin-top: 2px;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+@media (max-width: 1024px) {
+  .articleWrapper {
+    flex-direction: column;
+  }
+
+  .articleSidebar {
+    display: none;
+  }
+
+  .articleMain {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .articleWrapper {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .articleTitle {
+    font-size: 2rem;
+  }
+
+  .executiveSummary {
+    padding: var(--spacing-lg);
+  }
+
+  .summaryStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articleContent h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .sectionHeading {
+    font-size: var(--font-size-xl);
+  }
+
+  .tippingPointsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .summaryStats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statValue {
+    font-size: var(--font-size-xl);
+  }
+}

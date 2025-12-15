@@ -1,0 +1,58 @@
+/* ============================================
+   Section Insight Card
+   Clean, professional summary styling
+   ============================================ */
+
+.insight {
+  display: flex;
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--radius-md);
+}
+
+.indicator {
+  flex-shrink: 0;
+  width: 3px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.content p:not(:last-child) {
+  margin-bottom: var(--spacing-sm);
+}
+
+.content strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Variants */
+.warning .indicator {
+  background: #E74C3C;
+}
+
+.warning {
+  background: rgba(231, 76, 60, 0.04);
+}
+
+.success .indicator {
+  background: #27AE60;
+}
+
+.success {
+  background: rgba(39, 174, 96, 0.04);
+}
+
