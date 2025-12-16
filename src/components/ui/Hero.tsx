@@ -46,8 +46,8 @@ export default function Hero({
       
       {showAnimation && (
         <ParticleNetwork 
-          particleCount={fullHeight ? 100 : 60}
-          connectionDistance={fullHeight ? 150 : 120}
+          particleCount={fullHeight ? 250 : 140}
+          connectionDistance={fullHeight ? 170 : 140}
         />
       )}
       {backgroundImage && (

@@ -47,7 +47,7 @@ export default function Home() {
             <span className={styles.heroLogoAccent}>Lab</span>
           </span>
         }
-        subtitle="Quantitative research on climate, health, and economic systems"
+        subtitle="Explore The World Through Data"
         fullHeight
         staggeredAnimation
       >
