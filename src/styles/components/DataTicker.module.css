@@ -55,11 +55,6 @@
   position: relative;
   overflow: hidden;
   
-  /* Smooth transitions for interactions */
-  transition: 
-    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.4s ease-out;
-  
   /* Subtle floating animation - glass feels alive */
   animation: glassFloat 6s ease-in-out infinite;
 }
@@ -203,32 +198,6 @@
   }
 }
 
-/* Enhanced hover interaction - glass responds to touch */
-@media (hover: hover) {
-  .ticker:hover {
-    transform: translateY(-6px) scale(1.02);
-    
-    box-shadow: 
-      /* Enhanced inner glow on hover */
-      inset 0 1px 0 rgba(255, 255, 255, 0.5),
-      inset 0 2px 8px rgba(255, 255, 255, 0.15),
-      inset 0 -2px 8px rgba(0, 0, 0, 0.05),
-      /* Brighter outer glow */
-      0 0 0 1px rgba(255, 255, 255, 0.2),
-      0 8px 24px rgba(0, 0, 0, 0.12),
-      0 20px 60px rgba(0, 0, 0, 0.2),
-      /* Stronger colored glow */
-      0 12px 48px rgba(0, 180, 255, 0.15),
-      0 0 80px rgba(0, 180, 255, 0.1);
-    
-    /* Pause floating animation on hover */
-    animation-play-state: paused;
-  }
-  
-  .ticker:hover::before {
-    animation-duration: 3s;
-  }
-}
 
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {

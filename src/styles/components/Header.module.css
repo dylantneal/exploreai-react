@@ -40,11 +40,22 @@
 .logoPrimary {
   color: var(--color-text-light);
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
 .logoAccent {
   color: var(--color-secondary);
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Color swap on hover */
+.logo:hover .logoPrimary {
+  color: var(--color-secondary);
+}
+
+.logo:hover .logoAccent {
+  color: var(--color-text-light);
 }
 
 .nav {
