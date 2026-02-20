@@ -65,10 +65,65 @@
   margin: 0;
 }
 
+/* Our Story / Timeline */
+.story {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.story h2 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--color-secondary);
+}
+
+.timelineYear {
+  flex-shrink: 0;
+  font-family: var(--font-family-display);
+  font-weight: 600;
+  color: var(--color-secondary);
+  min-width: 4ch;
+}
+
+.timelineContent h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.timelineContent p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* Team Section */
 .team {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
+}
+
+.teamIntro {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-xl);
 }
 
 .team h2 {

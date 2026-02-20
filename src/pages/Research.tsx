@@ -225,7 +225,7 @@ export default function Research() {
             <div className={styles.processStep}>
               <span className={styles.stepNumber}>4</span>
               <h3>Open Publication</h3>
-              <p>Full methodology disclosed. Code available on GitHub. Independent verification welcomed.</p>
+              <p>Full methodology disclosed. Independent verification welcomed.</p>
             </div>
           </div>
         </div>

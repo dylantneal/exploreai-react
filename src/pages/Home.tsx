@@ -4,6 +4,7 @@ import Hero from '../components/ui/Hero';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import DataTicker from '../components/ui/DataTicker';
+import { TRUST_LINE } from '../utils/constants';
 import styles from '../styles/pages/Home.module.css';
 
 const FOCUS_AREAS = [
@@ -81,6 +82,10 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </Section>
+
+      <Section variant="alt">
+        <p className={styles.trustLine}>{TRUST_LINE}</p>
       </Section>
 
       <Section variant="dark">

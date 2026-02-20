@@ -221,6 +221,17 @@
   gap: var(--spacing-sm);
 }
 
+/* Trust line */
+.trustLine {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+}
+
 /* CTA Section */
 .cta {
   text-align: center;

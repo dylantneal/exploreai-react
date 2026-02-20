@@ -31,7 +31,7 @@ export default function NotFound() {
         <div className={styles.links}>
           <p>Or try one of these:</p>
           <ul>
-            <li><Link to="/insights">View Insights</Link></li>
+            <li><Link to="/research">Explore Research</Link></li>
             <li><Link to="/about">About Clarity Lab</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>

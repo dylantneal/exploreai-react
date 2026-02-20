@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Github, Mail, MessageCircle } from 'lucide-react';
-import { SITE_NAME, SITE_YEAR, SOCIAL_LINKS } from '../../utils/constants';
+import { Mail } from 'lucide-react';
+import { SITE_NAME, SITE_YEAR, FOUNDED_YEAR, SOCIAL_LINKS } from '../../utils/constants';
 import styles from '../../styles/components/Footer.module.css';
 
 export default function Footer() {
@@ -12,6 +12,9 @@ export default function Footer() {
             <Link to="/" className={styles.footerLogo}>{SITE_NAME}</Link>
             <p className={styles.footerTagline}>
               Data-driven clarity on the world's biggest challenges
+            </p>
+            <p className={styles.footerFounded}>
+              Independent research since {FOUNDED_YEAR}.
             </p>
           </div>
 
@@ -36,25 +39,21 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerSocial}>
-            <h4>Connect</h4>
-            <div className={styles.socialLinks}>
-              <a href={`mailto:${SOCIAL_LINKS.email}`} aria-label="Email">
-                <Mail size={20} />
-              </a>
-              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github size={20} />
-              </a>
-              <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer" aria-label="Discord">
-                <MessageCircle size={20} />
-              </a>
-            </div>
+            <h4>Contact</h4>
+            <a href={`mailto:${SOCIAL_LINKS.email}`} className={styles.footerEmail}>
+              <Mail size={18} />
+              {SOCIAL_LINKS.email}
+            </a>
           </div>
         </div>
 
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
-            &copy; {SITE_YEAR} {SITE_NAME}. Open research for humanity.
+            &copy; {FOUNDED_YEAR}&ndash;{SITE_YEAR} {SITE_NAME}. Open research for humanity.
           </p>
+          <nav className={styles.footerLegal} aria-label="Legal">
+            <Link to="/privacy">Privacy</Link>
+          </nav>
         </div>
       </div>
     </footer>

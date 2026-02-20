@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Research from './pages/Research';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 import NotFound from './pages/NotFound';
 
 // Research Article Pages
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
       { path: 'research', element: <Research /> },
       { path: 'about', element: <About /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'privacy', element: <Privacy /> },
 
       // Redirect /insights to /research (legacy URL support)
       { path: 'insights', element: <Navigate to="/research" replace /> },
