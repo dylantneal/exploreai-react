@@ -21,8 +21,7 @@ export default function About() {
           </p>
           <p>
             The objective is straightforward: take complex global data, analyze it rigorously, 
-            and present findings clearly. All research is open access. All methodology is documented. 
-            All code is available for review.
+            and present findings clearly. All research is open access. All methodology is documented.
           </p>
         </div>
       </Section>
@@ -78,8 +77,8 @@ export default function About() {
             <div className={styles.methodCard}>
               <h3>Reproducibility</h3>
               <p>
-                Analysis code and data transformations are documented. Any finding should be 
-                independently verifiable using the linked source data; methodology is available on request.
+                Any finding should be independently verifiable using the linked source data. 
+                Methodology is available on request.
               </p>
             </div>
             <div className={styles.methodCard}>

@@ -13,6 +13,9 @@ import NotFound from './pages/NotFound';
 import ClimateChange from './pages/insights/ClimateChange';
 import GlobalHealth from './pages/insights/GlobalHealth';
 import EconomicSystems from './pages/insights/EconomicSystems';
+import Demographics from './pages/insights/Demographics';
+import FoodAgriculture from './pages/insights/FoodAgriculture';
+import EnergySystems from './pages/insights/EnergySystems';
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +36,9 @@ export const router = createBrowserRouter([
       { path: 'insights/climate-change', element: <ClimateChange /> },
       { path: 'insights/global-health', element: <GlobalHealth /> },
       { path: 'insights/economic-systems', element: <EconomicSystems /> },
+      { path: 'insights/demographics', element: <Demographics /> },
+      { path: 'insights/food-agriculture', element: <FoodAgriculture /> },
+      { path: 'insights/energy-systems', element: <EnergySystems /> },
 
       // 404 - Catch all
       { path: '*', element: <NotFound /> },

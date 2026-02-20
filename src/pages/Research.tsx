@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, Globe, Microscope, BarChart3, 
+  ArrowRight, Globe, Microscope, BarChart3, Users, Wheat, Zap,
   TrendingUp, AlertTriangle, Lightbulb, Clock
 } from 'lucide-react';
 import Hero from '../components/ui/Hero';
@@ -12,6 +12,9 @@ const HEADLINE_STATS = [
   { value: '+1.28°C', label: 'Global warming since pre-industrial era', icon: <TrendingUp size={20} /> },
   { value: '28 yrs', label: 'Life expectancy gained since 1950', icon: <TrendingUp size={20} /> },
   { value: '$25T', label: 'Annual global trade volume', icon: <TrendingUp size={20} /> },
+  { value: '8.2B', label: 'Global population', icon: <Users size={20} /> },
+  { value: '735M', label: 'Facing hunger (FAO 2022)', icon: <Wheat size={20} /> },
+  { value: '~90%', label: 'New power capacity from renewables', icon: <Zap size={20} /> },
 ];
 
 const KEY_FINDINGS = [
@@ -50,6 +53,42 @@ const KEY_FINDINGS = [
       'Labor markets recovered but structural shifts continue',
     ],
     link: '/insights/economic-systems',
+  },
+  {
+    area: 'Demographics',
+    icon: <Users size={20} />,
+    color: '#E67E22',
+    findings: [
+      'Global population reached 8.2 billion in 2024, doubling since 1974',
+      'Share aged 65+ is 10% globally and rising; Japan and Europe lead',
+      'Half of all countries have fertility below replacement level (2.1)',
+      'International migrant stock: 281 million, with 123 million displaced',
+    ],
+    link: '/insights/demographics',
+  },
+  {
+    area: 'Food & Agriculture',
+    icon: <Wheat size={20} />,
+    color: '#2ECC71',
+    findings: [
+      '735 million people faced hunger in 2022; progress reversed after COVID',
+      'Cereal yields have doubled since 1960 but growth is slowing',
+      'Agriculture accounts for about 22% of global GHG emissions',
+      'Climate change is already reducing yields in many regions (IPCC)',
+    ],
+    link: '/insights/food-agriculture',
+  },
+  {
+    area: 'Energy Systems',
+    icon: <Zap size={20} />,
+    color: '#F1C40F',
+    findings: [
+      'Primary energy is still ~80% fossil; transition is accelerating',
+      'Renewables accounted for >90% of new power capacity added globally',
+      'About 760 million people still lack electricity access',
+      'Critical minerals demand for batteries and grids is surging (IEA)',
+    ],
+    link: '/insights/energy-systems',
   },
 ];
 
@@ -101,6 +140,36 @@ const PROJECTS = [
     chartCount: 4,
     sources: ['World Bank', 'IMF', 'WTO'],
     link: '/insights/economic-systems',
+  },
+  {
+    title: 'Demographics & Population',
+    focusArea: 'Demographics & Population',
+    icon: <Users size={24} />,
+    description: 'Population size and growth, aging, fertility, urbanization, and migration. Analysis from UN World Population Prospects, UNPD, and IOM.',
+    status: 'active' as const,
+    chartCount: 10,
+    sources: ['UN DESA', 'UNPD', 'IOM'],
+    link: '/insights/demographics',
+  },
+  {
+    title: 'Food & Agriculture',
+    focusArea: 'Food & Agriculture',
+    icon: <Wheat size={24} />,
+    description: 'Undernourishment, crop yields, land use, fertilizer, fisheries, food prices, and climate impact. Analysis from FAO, IFPRI, World Bank, and IPCC.',
+    status: 'active' as const,
+    chartCount: 10,
+    sources: ['FAO', 'IFPRI', 'World Bank', 'IPCC'],
+    link: '/insights/food-agriculture',
+  },
+  {
+    title: 'Energy Systems',
+    focusArea: 'Energy Systems',
+    icon: <Zap size={24} />,
+    description: 'Primary energy mix, electricity by source, fossil phase-out, energy access, and critical minerals. Analysis from IEA, IRENA, BP, and World Bank.',
+    status: 'active' as const,
+    chartCount: 10,
+    sources: ['IEA', 'IRENA', 'BP', 'World Bank'],
+    link: '/insights/energy-systems',
   },
 ];
 

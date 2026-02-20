@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   ArrowLeft, ExternalLink, AlertTriangle, TrendingUp, TrendingDown,
   Calendar, DollarSign, Globe, Users, Building, ShoppingCart,
@@ -8,7 +9,12 @@ import {
 import PlotlyChart from '../../components/charts/PlotlyChart';
 import TableOfContents, { TOCItem } from '../../components/ui/TableOfContents';
 import SectionInsight from '../../components/ui/SectionInsight';
+import CiteThisReport from '../../components/ui/CiteThisReport';
+import { SITE_NAME, SITE_URL } from '../../utils/constants';
 import styles from '../../styles/pages/Article.module.css';
+
+const INSIGHT_TITLE = 'Economic Systems: A Data-Driven Analysis';
+const INSIGHT_DESCRIPTION = 'Global economic patterns, inequality, trade, employment, and public finance. Data from World Bank, IMF, WTO, ILO.';
 
 // ============================================
 // DATA SETS - Based on World Bank, IMF, WTO, ILO
@@ -234,8 +240,18 @@ const tocItems: TOCItem[] = [
 ];
 
 export default function EconomicSystems() {
+  const canonicalUrl = `${SITE_URL}/insights/economic-systems`;
   return (
     <div className={styles.articlePage}>
+      <Helmet>
+        <title>{INSIGHT_TITLE} | {SITE_NAME}</title>
+        <meta name="description" content={INSIGHT_DESCRIPTION} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`${INSIGHT_TITLE} | ${SITE_NAME}`} />
+        <meta property="og:description" content={INSIGHT_DESCRIPTION} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <div className={styles.articleWrapper}>
         {/* Sidebar Navigation */}
         <aside className={styles.articleSidebar}>
@@ -260,6 +276,13 @@ export default function EconomicSystems() {
               <span>Last updated: December 2025</span>
             </div>
           </header>
+
+          <CiteThisReport
+            reportId="CL-2025-03"
+            title={INSIGHT_TITLE}
+            version="December 2025"
+            path="/insights/economic-systems"
+          />
 
           {/* Executive Summary */}
           <section id="summary" className={styles.executiveSummary}>

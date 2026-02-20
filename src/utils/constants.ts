@@ -1,6 +1,8 @@
 export const SITE_NAME = 'Clarity Lab';
-export const SITE_TAGLINE = 'Quantitative analysis of climate, health, and economic systems';
+export const SITE_TAGLINE = 'Quantitative analysis of climate, health, economic, demographic, food, and energy systems';
 export const SITE_DESCRIPTION = 'Clarity Lab produces open research on global challenges using data from authoritative sources.';
+/** Canonical base URL for the site (used in citations and OG tags). */
+export const SITE_URL = 'https://clarity-lab.net';
 export const SITE_YEAR = 2026;
 /** Year the lab was established (used for "Since", "Founded", institutional copy). */
 export const FOUNDED_YEAR = 2022;

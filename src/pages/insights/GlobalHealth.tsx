@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   ArrowLeft, ExternalLink, AlertTriangle, TrendingUp, TrendingDown,
   Calendar, Heart, Users, DollarSign, Activity, Syringe,
@@ -8,7 +9,12 @@ import {
 import PlotlyChart from '../../components/charts/PlotlyChart';
 import TableOfContents, { TOCItem } from '../../components/ui/TableOfContents';
 import SectionInsight from '../../components/ui/SectionInsight';
+import CiteThisReport from '../../components/ui/CiteThisReport';
+import { SITE_NAME, SITE_URL } from '../../utils/constants';
 import styles from '../../styles/pages/Article.module.css';
+
+const INSIGHT_TITLE = 'Global Health: A Data-Driven Analysis';
+const INSIGHT_DESCRIPTION = 'Worldwide health trends, disparities, and determinants: life expectancy, maternal and child mortality, disease burden, vaccination, and healthcare spending. Data from WHO, World Bank, UNICEF.';
 
 // ============================================
 // DATA SETS - Updated December 2025
@@ -153,8 +159,18 @@ const tocItems: TOCItem[] = [
 ];
 
 export default function GlobalHealth() {
+  const canonicalUrl = `${SITE_URL}/insights/global-health`;
   return (
     <div className={styles.articlePage}>
+      <Helmet>
+        <title>{INSIGHT_TITLE} | {SITE_NAME}</title>
+        <meta name="description" content={INSIGHT_DESCRIPTION} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`${INSIGHT_TITLE} | ${SITE_NAME}`} />
+        <meta property="og:description" content={INSIGHT_DESCRIPTION} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <div className={styles.articleWrapper}>
         {/* Sidebar Navigation */}
         <aside className={styles.articleSidebar}>
@@ -179,6 +195,13 @@ export default function GlobalHealth() {
               <span>Last updated: December 2025</span>
             </div>
           </header>
+
+          <CiteThisReport
+            reportId="CL-2025-02"
+            title={INSIGHT_TITLE}
+            version="December 2025"
+            path="/insights/global-health"
+          />
 
           {/* Executive Summary */}
           <section id="summary" className={styles.executiveSummary}>

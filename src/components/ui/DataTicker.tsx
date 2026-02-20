@@ -16,7 +16,7 @@ const DATA_FACTS: DataFact[] = [
     source: 'NOAA' 
   },
   { 
-    value: '8.1 billion', 
+    value: '8.2 billion', 
     label: 'global population', 
     context: 'Doubled since 1974',
     source: 'UN' 

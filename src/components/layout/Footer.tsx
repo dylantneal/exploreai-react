@@ -25,6 +25,9 @@ export default function Footer() {
                 <li><Link to="/insights/climate-change">Climate & Environment</Link></li>
                 <li><Link to="/insights/global-health">Global Health</Link></li>
                 <li><Link to="/insights/economic-systems">World Economics</Link></li>
+                <li><Link to="/insights/demographics">Demographics & Population</Link></li>
+                <li><Link to="/insights/food-agriculture">Food & Agriculture</Link></li>
+                <li><Link to="/insights/energy-systems">Energy Systems</Link></li>
               </ul>
             </div>
 

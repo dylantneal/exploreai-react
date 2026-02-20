@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, Globe, Microscope } from 'lucide-react';
+import { ArrowRight, BarChart3, Globe, Microscope, Users, Wheat, Zap } from 'lucide-react';
 import Hero from '../components/ui/Hero';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
@@ -34,6 +34,33 @@ const FOCUS_AREAS = [
     stat: '$25T',
     statLabel: 'Annual global trade',
     link: '/insights/economic-systems',
+  },
+  {
+    id: 'demographics',
+    title: 'Demographics & Population',
+    icon: <Users size={28} />,
+    description: 'Population size and growth, aging, fertility, urbanization, and migration. Data from UN World Population Prospects, UNPD, and IOM.',
+    stat: '8.2B',
+    statLabel: 'Global population',
+    link: '/insights/demographics',
+  },
+  {
+    id: 'food-agriculture',
+    title: 'Food & Agriculture',
+    icon: <Wheat size={28} />,
+    description: 'Undernourishment, crop yields, land use, fertilizer, fisheries, food prices, and climate impact. Data from FAO, IFPRI, and World Bank.',
+    stat: '735M',
+    statLabel: 'Facing hunger (2022)',
+    link: '/insights/food-agriculture',
+  },
+  {
+    id: 'energy-systems',
+    title: 'Energy Systems',
+    icon: <Zap size={28} />,
+    description: 'Primary energy mix, electricity by source, fossil phase-out, energy access, and critical minerals. Data from IEA, IRENA, BP, and World Bank.',
+    stat: '~90%',
+    statLabel: 'New power from renewables',
+    link: '/insights/energy-systems',
   },
 ];
 
