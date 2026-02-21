@@ -27,6 +27,9 @@ export default function Footer() {
               <li><Link to="/insights/demographics">Demographics</Link></li>
               <li><Link to="/insights/food-agriculture">Food & Agriculture</Link></li>
               <li><Link to="/insights/energy-systems">Energy Systems</Link></li>
+              <li><Link to="/insights/biodiversity-ecosystems">Biodiversity & Ecosystems</Link></li>
+              <li><Link to="/insights/education-human-capital">Education & Human Capital</Link></li>
+              <li><Link to="/insights/inequality-inclusive-growth">Inequality & Inclusive Growth</Link></li>
             </ul>
           </div>
 
