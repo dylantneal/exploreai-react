@@ -12,7 +12,7 @@ import { SITE_NAME, SITE_URL } from '../../utils/constants';
 import styles from '../../styles/pages/Article.module.css';
 
 const INSIGHT_TITLE = 'Energy Systems: A Data-Driven Analysis';
-const INSIGHT_DESCRIPTION = 'Primary energy mix, electricity by source, fossil phase-out, energy access, and critical minerals—from IEA, IRENA, BP, and World Bank.';
+const INSIGHT_DESCRIPTION = 'Primary energy mix, electricity by source, fossil phase-out, energy access, and critical minerals. Data from IEA, IRENA, BP, and World Bank.';
 
 // ============================================
 // DATA SETS - Based on IEA, IRENA, BP, World Bank
@@ -123,7 +123,7 @@ export default function EnergySystems() {
             <span className={styles.focusArea}>Energy Systems</span>
             <h1 className={styles.articleTitle}>{INSIGHT_TITLE}</h1>
             <p className={styles.articleMeta}>
-              Primary energy mix, electricity by source, fossil phase-out, energy access, and critical minerals—from IEA, IRENA, BP, and World Bank.
+              Primary energy mix, electricity by source, fossil phase-out, energy access, and critical minerals. Data from IEA, IRENA, BP, and World Bank.
             </p>
             <div className={styles.lastUpdated}>
               <Calendar size={14} />
@@ -204,7 +204,7 @@ export default function EnergySystems() {
 
               <SectionInsight variant="warning">
                 <p>
-                  <strong>Fossil fuels still supply about 80% of primary energy.</strong> The transition is underway—renewables are the fastest-growing source—but 
+                  <strong>Fossil fuels still supply about 80% of primary energy.</strong> The transition is underway (renewables are the fastest-growing source), but 
                   absolute fossil consumption remains high. Meeting net-zero goals requires a sharp decline in coal, oil, and gas use over the next decades.
                 </p>
               </SectionInsight>

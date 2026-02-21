@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, Globe, Microscope, BarChart3, Users, Wheat, Zap,
+  ArrowRight, Globe, Microscope, BarChart3, Users, Wheat, Zap, TreePine, GraduationCap, Scale,
   TrendingUp, AlertTriangle, Lightbulb, Clock
 } from 'lucide-react';
 import Hero from '../components/ui/Hero';
@@ -15,6 +15,9 @@ const HEADLINE_STATS = [
   { value: '8.2B', label: 'Global population', icon: <Users size={20} /> },
   { value: '735M', label: 'Facing hunger (FAO 2022)', icon: <Wheat size={20} /> },
   { value: '~90%', label: 'New power capacity from renewables', icon: <Zap size={20} /> },
+  { value: '−69%', label: 'Wildlife population decline since 1970', icon: <TreePine size={20} /> },
+  { value: '250M', label: 'Children and youth out of school', icon: <GraduationCap size={20} /> },
+  { value: '52%', label: 'Global income taken by top 10%', icon: <Scale size={20} /> },
 ];
 
 const KEY_FINDINGS = [
@@ -89,6 +92,42 @@ const KEY_FINDINGS = [
       'Critical minerals demand for batteries and grids is surging (IEA)',
     ],
     link: '/insights/energy-systems',
+  },
+  {
+    area: 'Biodiversity',
+    icon: <TreePine size={20} />,
+    color: '#16A085',
+    findings: [
+      'Monitored wildlife populations declined 69% on average since 1970 (WWF)',
+      'Over 44,000 species are threatened with extinction on the IUCN Red List',
+      'Protected areas cover 17% of land and 8% of oceans, short of the 30×30 target',
+      'Global ecosystem services are valued at ~$125 trillion per year (Costanza et al.)',
+    ],
+    link: '/insights/biodiversity-ecosystems',
+  },
+  {
+    area: 'Education',
+    icon: <GraduationCap size={20} />,
+    color: '#2980B9',
+    findings: [
+      '250 million children and youth are out of school globally (UNESCO 2022)',
+      '70% of 10-year-olds in developing countries cannot read a simple text',
+      'PISA 2022 recorded the steepest math score decline in the programme\'s history',
+      'Per-pupil spending varies nearly 200× between low- and high-income countries',
+    ],
+    link: '/insights/education-human-capital',
+  },
+  {
+    area: 'Inequality',
+    icon: <Scale size={20} />,
+    color: '#D35400',
+    findings: [
+      'Top 10% earners take 52% of global income; bottom 50% get just 8.5% (WID)',
+      'The top 1% owns 38% of global wealth; bottom 50% owns about 2%',
+      'Extreme poverty fell from 38% to 8.6% since 1990, but 692 million remain',
+      'Women earn ~20% less than men globally; the gap persists in every country',
+    ],
+    link: '/insights/inequality-inclusive-growth',
   },
 ];
 
@@ -170,6 +209,36 @@ const PROJECTS = [
     chartCount: 10,
     sources: ['IEA', 'IRENA', 'BP', 'World Bank'],
     link: '/insights/energy-systems',
+  },
+  {
+    title: 'Biodiversity & Ecosystems',
+    focusArea: 'Biodiversity & Ecosystems',
+    icon: <TreePine size={24} />,
+    description: 'Species trends, extinction risk, protected area coverage, deforestation, ecosystem services, and policy frameworks. Analysis from IUCN, IPBES, FAO, CBD, and BirdLife.',
+    status: 'active' as const,
+    chartCount: 12,
+    sources: ['IUCN', 'IPBES', 'FAO', 'CBD', 'BirdLife'],
+    link: '/insights/biodiversity-ecosystems',
+  },
+  {
+    title: 'Education & Human Capital',
+    focusArea: 'Education & Human Capital',
+    icon: <GraduationCap size={24} />,
+    description: 'Enrollment, completion, learning outcomes (PISA), education spending, gender gaps, and the human capital imperative. Analysis from UNESCO UIS, World Bank EdStats, and OECD.',
+    status: 'active' as const,
+    chartCount: 13,
+    sources: ['UNESCO UIS', 'World Bank', 'OECD'],
+    link: '/insights/education-human-capital',
+  },
+  {
+    title: 'Inequality & Inclusive Growth',
+    focusArea: 'Inequality & Inclusive Growth',
+    icon: <Scale size={24} />,
+    description: 'Income and wealth distribution, top shares, extreme poverty, gender wage gaps, social mobility, and redistribution policy. Analysis from WID, World Bank, OECD, and ILO.',
+    status: 'active' as const,
+    chartCount: 14,
+    sources: ['WID', 'World Bank', 'OECD', 'ILO'],
+    link: '/insights/inequality-inclusive-growth',
   },
 ];
 

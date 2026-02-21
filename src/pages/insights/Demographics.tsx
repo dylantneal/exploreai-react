@@ -12,7 +12,7 @@ import { SITE_NAME, SITE_URL } from '../../utils/constants';
 import styles from '../../styles/pages/Article.module.css';
 
 const INSIGHT_TITLE = 'Demographics & Population: A Data-Driven Analysis';
-const INSIGHT_DESCRIPTION = 'Population size and growth, aging, fertility, urbanization, and migration—from UN World Population Prospects, UNPD, and IOM.';
+const INSIGHT_DESCRIPTION = 'Population size and growth, aging, fertility, urbanization, and migration. Data from UN World Population Prospects, UNPD, and IOM.';
 
 // ============================================
 // DATA SETS - Based on UN WPP, UNPD, IOM
@@ -127,7 +127,7 @@ export default function Demographics() {
             <span className={styles.focusArea}>Demographics & Population</span>
             <h1 className={styles.articleTitle}>{INSIGHT_TITLE}</h1>
             <p className={styles.articleMeta}>
-              Population size and growth, aging, fertility, urbanization, and migration—from UN and IOM.
+              Population size and growth, aging, fertility, urbanization, and migration. Data from UN and IOM.
             </p>
             <div className={styles.lastUpdated}>
               <Calendar size={14} />
@@ -362,7 +362,7 @@ export default function Demographics() {
               <span className={styles.sectionNumber}>Part 3</span>
               <h2 className={styles.sectionHeading}>Fertility</h2>
               <p className={styles.sectionLead}>
-                The total fertility rate (TFR)—births per woman—has fallen globally. Replacement level is about 2.1; 
+                The total fertility rate (TFR), defined as births per woman, has fallen globally. Replacement level is about 2.1; 
                 half of all countries are now below that, while others remain well above it.
               </p>
             </section>
@@ -484,7 +484,7 @@ export default function Demographics() {
               <h2 className={styles.sectionHeading}>Migration</h2>
               <p className={styles.sectionLead}>
                 International migration has grown in absolute terms: the UN estimated 281 million people living outside their country of birth in mid-2020, with the 2024 dataset extending estimates through 2024. 
-                Forced displacement—refugees, asylum seekers, and internally displaced persons—reached 123 million at the end of 2024.
+                Forced displacement (refugees, asylum seekers, and internally displaced persons) reached 123 million at the end of 2024.
               </p>
             </section>
 

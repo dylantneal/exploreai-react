@@ -12,7 +12,7 @@ import { SITE_NAME, SITE_URL } from '../../utils/constants';
 import styles from '../../styles/pages/Article.module.css';
 
 const INSIGHT_TITLE = 'Food & Agriculture: A Data-Driven Analysis';
-const INSIGHT_DESCRIPTION = 'Undernourishment, crop yields, land use, fertilizer, fisheries, food prices, and climate impact—from FAO, IFPRI, World Bank, and IPCC.';
+const INSIGHT_DESCRIPTION = 'Undernourishment, crop yields, land use, fertilizer, fisheries, food prices, and climate impact. Data from FAO, IFPRI, World Bank, and IPCC.';
 
 // ============================================
 // DATA SETS - Based on FAO, IFPRI, World Bank, IPCC
@@ -123,7 +123,7 @@ export default function FoodAgriculture() {
             <span className={styles.focusArea}>Food & Agriculture</span>
             <h1 className={styles.articleTitle}>{INSIGHT_TITLE}</h1>
             <p className={styles.articleMeta}>
-              Undernourishment, crop yields, land use, fertilizer, fisheries, food prices, and climate impact—from FAO, IFPRI, World Bank, and IPCC.
+              Undernourishment, crop yields, land use, fertilizer, fisheries, food prices, and climate impact. Data from FAO, IFPRI, World Bank, and IPCC.
             </p>
             <div className={styles.lastUpdated}>
               <Calendar size={14} />

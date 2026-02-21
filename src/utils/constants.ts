@@ -1,5 +1,5 @@
 export const SITE_NAME = 'Clarity Lab';
-export const SITE_TAGLINE = 'Quantitative analysis of climate, health, economic, demographic, food, and energy systems';
+export const SITE_TAGLINE = 'Quantitative analysis of climate, biodiversity, health, education, economic, inequality, demographic, food, and energy systems';
 export const SITE_DESCRIPTION = 'Clarity Lab produces open research on global challenges using data from authoritative sources.';
 /** Canonical base URL for the site (used in citations and OG tags). */
 export const SITE_URL = 'https://clarity-lab.net';
