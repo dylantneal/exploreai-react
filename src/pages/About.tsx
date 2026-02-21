@@ -100,26 +100,6 @@ export default function About() {
         </div>
       </Section>
 
-      <Section variant="alt">
-        <div className={styles.team}>
-          <h2>Our Team</h2>
-          <p className={styles.teamIntro}>
-            Clarity Lab is run by a small team of researchers and engineers who share a commitment 
-            to rigorous, source-transparent analysis. We work with advisors and external reviewers 
-            on methodology and interpretation.
-          </p>
-          <div className={styles.teamCard}>
-            <h3>Dylan Neal</h3>
-            <p className={styles.role}>Founder & Lead Researcher</p>
-            <p>
-              Leads research design, data analysis, and publication. Background in software engineering 
-              and data systems; Master's in Software Engineering (DePaul). Ensures all outputs meet 
-              our standards for source quality, reproducibility, and clear communication of uncertainty.
-            </p>
-          </div>
-        </div>
-      </Section>
-
       <Section variant="dark">
         <div className={styles.sources}>
           <h2>Primary Data Sources</h2>
