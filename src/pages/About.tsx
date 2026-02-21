@@ -103,25 +103,44 @@ export default function About() {
       <Section variant="dark">
         <div className={styles.sources}>
           <h2>Primary Data Sources</h2>
-          <div className={styles.sourceGrid}>
-            <a href="https://climate.nasa.gov/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-              NASA Climate <ExternalLink size={14} />
-            </a>
-            <a href="https://www.noaa.gov/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-              NOAA <ExternalLink size={14} />
-            </a>
-            <a href="https://www.who.int/data" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-              World Health Organization <ExternalLink size={14} />
-            </a>
-            <a href="https://data.worldbank.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-              World Bank <ExternalLink size={14} />
-            </a>
-            <a href="https://www.imf.org/en/Data" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-              IMF <ExternalLink size={14} />
-            </a>
-            <a href="https://nsidc.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-              NSIDC <ExternalLink size={14} />
-            </a>
+          <p className={styles.sourcesIntro}>
+            All research draws from authoritative institutional sources.
+            Secondary aggregations are avoided where possible.
+          </p>
+          <div className={styles.sourceColumns}>
+            <div className={styles.sourceGroup}>
+              <h3>Climate &amp; Environment</h3>
+              <a href="https://climate.nasa.gov/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>NASA Climate <ExternalLink size={12} /></a>
+              <a href="https://www.noaa.gov/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>NOAA <ExternalLink size={12} /></a>
+              <a href="https://www.ipcc.ch/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>IPCC <ExternalLink size={12} /></a>
+              <a href="https://nsidc.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>NSIDC <ExternalLink size={12} /></a>
+            </div>
+            <div className={styles.sourceGroup}>
+              <h3>Health &amp; Demographics</h3>
+              <a href="https://www.who.int/data" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>WHO <ExternalLink size={12} /></a>
+              <a href="https://population.un.org/wpp/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>UN DESA <ExternalLink size={12} /></a>
+              <a href="https://www.iom.int/data-and-research" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>IOM <ExternalLink size={12} /></a>
+            </div>
+            <div className={styles.sourceGroup}>
+              <h3>Economics &amp; Inequality</h3>
+              <a href="https://data.worldbank.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>World Bank <ExternalLink size={12} /></a>
+              <a href="https://www.imf.org/en/Data" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>IMF <ExternalLink size={12} /></a>
+              <a href="https://data.wto.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>WTO <ExternalLink size={12} /></a>
+              <a href="https://wid.world/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>World Inequality Database <ExternalLink size={12} /></a>
+              <a href="https://data.oecd.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>OECD <ExternalLink size={12} /></a>
+            </div>
+            <div className={styles.sourceGroup}>
+              <h3>Energy &amp; Food</h3>
+              <a href="https://www.iea.org/data-and-statistics" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>IEA <ExternalLink size={12} /></a>
+              <a href="https://www.irena.org/Data" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>IRENA <ExternalLink size={12} /></a>
+              <a href="https://www.fao.org/faostat/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>FAO <ExternalLink size={12} /></a>
+            </div>
+            <div className={styles.sourceGroup}>
+              <h3>Biodiversity &amp; Education</h3>
+              <a href="https://www.iucnredlist.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>IUCN Red List <ExternalLink size={12} /></a>
+              <a href="https://www.worldwildlife.org/pages/living-planet-report-2024" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>WWF Living Planet <ExternalLink size={12} /></a>
+              <a href="https://data.uis.unesco.org/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>UNESCO UIS <ExternalLink size={12} /></a>
+            </div>
           </div>
         </div>
       </Section>
