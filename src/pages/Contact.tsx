@@ -80,6 +80,26 @@ export default function Contact() {
           </div>
         </div>
       </Section>
+
+      <Section variant="alt" id="commission">
+        <div className={styles.commissionBlock}>
+          <h2 className={styles.commissionHeading}>Commission Research</h2>
+          <p className={styles.commissionBody}>
+            Clarity Lab accepts commissions for custom analyses, data briefs, and
+            multi-domain assessments. Engagements range from focused short-form briefs
+            to comprehensive research reports with interactive visualizations.
+          </p>
+          <p className={styles.commissionBody}>
+            All commissioned work meets the same transparency, reproducibility, and
+            source-attribution standards as our public research. Scope and terms are
+            determined on a project basis.
+          </p>
+          <p className={styles.commissionContact}>
+            To discuss a project, contact{' '}
+            <a href={`mailto:${SOCIAL_LINKS.email}`}>{SOCIAL_LINKS.email}</a>.
+          </p>
+        </div>
+      </Section>
     </>
   );
 }

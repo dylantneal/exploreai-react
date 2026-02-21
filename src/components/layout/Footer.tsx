@@ -18,35 +18,39 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className={styles.footerLinks}>
-            <div className={styles.linkGroup}>
-              <h4>Research</h4>
-              <ul>
-                <li><Link to="/insights/climate-change">Climate & Environment</Link></li>
-                <li><Link to="/insights/global-health">Global Health</Link></li>
-                <li><Link to="/insights/economic-systems">World Economics</Link></li>
-                <li><Link to="/insights/demographics">Demographics & Population</Link></li>
-                <li><Link to="/insights/food-agriculture">Food & Agriculture</Link></li>
-                <li><Link to="/insights/energy-systems">Energy Systems</Link></li>
-              </ul>
-            </div>
-
-            <div className={styles.linkGroup}>
-              <h4>About</h4>
-              <ul>
-                <li><Link to="/about">Our Mission</Link></li>
-                <li><Link to="/research">Research Areas</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-              </ul>
-            </div>
+          <div className={styles.linkGroup}>
+            <h4>Research</h4>
+            <ul>
+              <li><Link to="/insights/climate-change">Climate & Environment</Link></li>
+              <li><Link to="/insights/global-health">Global Health</Link></li>
+              <li><Link to="/insights/economic-systems">World Economics</Link></li>
+              <li><Link to="/insights/demographics">Demographics</Link></li>
+              <li><Link to="/insights/food-agriculture">Food & Agriculture</Link></li>
+              <li><Link to="/insights/energy-systems">Energy Systems</Link></li>
+            </ul>
           </div>
 
-          <div className={styles.footerSocial}>
+          <div className={styles.linkGroup}>
+            <h4>About</h4>
+            <ul>
+              <li><Link to="/about">Our Mission</Link></li>
+              <li><Link to="/research">All Research</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/contact#commission">Commission Research</Link></li>
+              <li><Link to="/privacy">Privacy</Link></li>
+            </ul>
+          </div>
+
+          <div className={styles.linkGroup}>
             <h4>Contact</h4>
-            <a href={`mailto:${SOCIAL_LINKS.email}`} className={styles.footerEmail}>
-              <Mail size={18} />
-              {SOCIAL_LINKS.email}
-            </a>
+            <ul>
+              <li>
+                <a href={`mailto:${SOCIAL_LINKS.email}`} className={styles.footerEmail}>
+                  <Mail size={14} />
+                  {SOCIAL_LINKS.email}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -54,9 +58,6 @@ export default function Footer() {
           <p className={styles.copyright}>
             &copy; {FOUNDED_YEAR}&ndash;{SITE_YEAR} {SITE_NAME}. Open research for humanity.
           </p>
-          <nav className={styles.footerLegal} aria-label="Legal">
-            <Link to="/privacy">Privacy</Link>
-          </nav>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, Globe, Microscope, Users, Wheat, Zap } from 'lucide-react';
+import { ArrowRight, BarChart3, Globe, Microscope } from 'lucide-react';
 import Hero from '../components/ui/Hero';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
@@ -13,7 +13,7 @@ const FOCUS_AREAS = [
     title: 'Climate & Environment',
     icon: <Globe size={28} />,
     description: 'Atmospheric CO₂ concentrations, temperature anomalies, ice sheet dynamics, and extreme weather patterns, tracked from primary sources.',
-    stat: '426 ppm',
+    stat: '427 ppm',
     statLabel: 'Current CO₂',
     link: '/insights/climate-change',
   },
@@ -34,33 +34,6 @@ const FOCUS_AREAS = [
     stat: '$25T',
     statLabel: 'Annual global trade',
     link: '/insights/economic-systems',
-  },
-  {
-    id: 'demographics',
-    title: 'Demographics & Population',
-    icon: <Users size={28} />,
-    description: 'Population size and growth, aging, fertility, urbanization, and migration. Data from UN World Population Prospects, UNPD, and IOM.',
-    stat: '8.2B',
-    statLabel: 'Global population',
-    link: '/insights/demographics',
-  },
-  {
-    id: 'food-agriculture',
-    title: 'Food & Agriculture',
-    icon: <Wheat size={28} />,
-    description: 'Undernourishment, crop yields, land use, fertilizer, fisheries, food prices, and climate impact. Data from FAO, IFPRI, and World Bank.',
-    stat: '735M',
-    statLabel: 'Facing hunger (2022)',
-    link: '/insights/food-agriculture',
-  },
-  {
-    id: 'energy-systems',
-    title: 'Energy Systems',
-    icon: <Zap size={28} />,
-    description: 'Primary energy mix, electricity by source, fossil phase-out, energy access, and critical minerals. Data from IEA, IRENA, BP, and World Bank.',
-    stat: '~90%',
-    statLabel: 'New power from renewables',
-    link: '/insights/energy-systems',
   },
 ];
 
@@ -90,7 +63,24 @@ export default function Home() {
         </div>
       </Hero>
 
-      <Section title="Research Areas">
+      <Section>
+        <div className={styles.missionBlock}>
+          <h2 className={styles.missionHeading}>Independent research on the world's most pressing challenges.</h2>
+          <p className={styles.missionBody}>
+            Clarity Lab produces quantitative, open-access research across nine global domains:
+            climate, health, economics, demographics, food systems, energy, biodiversity,
+            education, and inequality. Every analysis draws from authoritative primary sources,
+            documents its methodology, and is freely available for verification and reuse.
+          </p>
+          <p className={styles.missionBody}>
+            Founded in 2022, Clarity Lab exists to make complex global data accessible,
+            clearly sourced, and contextualized, so that the evidence base for action is
+            as legible as possible.
+          </p>
+        </div>
+      </Section>
+
+      <Section title="Selected Research Topics">
         <div className={styles.focusGrid}>
           {FOCUS_AREAS.map((area) => (
             <Link to={area.link} key={area.id} className={styles.focusCard}>
@@ -109,6 +99,11 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        <div className={styles.viewAllResearch}>
+          <Button to="/research" variant="ghost" size="medium">
+            View All 9 Research Areas <ArrowRight size={16} />
+          </Button>
+        </div>
       </Section>
 
       <Section variant="alt">
@@ -119,7 +114,7 @@ export default function Home() {
         <div className={styles.cta}>
           <h2 className={styles.ctaTitle}>Collaborate</h2>
           <p className={styles.ctaText}>
-            Data contributions, methodology feedback, and research partnerships welcome.
+            Research partnerships, commissioned analyses, and methodology collaboration welcome.
           </p>
           <Button to="/contact" size="large">
             Contact <ArrowRight size={18} />

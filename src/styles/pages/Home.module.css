@@ -101,6 +101,33 @@
   content: ' · ';
 }
 
+/* Mission Block */
+.missionBlock {
+  max-width: 740px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.missionHeading {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-bottom: var(--spacing-lg);
+}
+
+.missionBody {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.missionBody:last-child {
+  margin-bottom: 0;
+}
+
 /* Focus Areas */
 .focusGrid {
   display: grid;
@@ -219,6 +246,13 @@
 
 .focusCard:hover .focusLink {
   gap: var(--spacing-sm);
+}
+
+/* View All Link */
+.viewAllResearch {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-2xl);
 }
 
 /* Trust line */
