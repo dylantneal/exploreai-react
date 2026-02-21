@@ -24,4 +24,4 @@ export const SOCIAL_LINKS = {
 };
 
 /** Short line for trust strip / footer (no fake logos; can add real ones later). */
-export const TRUST_LINE = 'Research cited by educators, policymakers, and news organizations worldwide.';
+export const TRUST_LINE = 'Rigorous, source-transparent research for educators, policymakers, and the press.';

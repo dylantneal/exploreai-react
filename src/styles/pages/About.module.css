@@ -113,50 +113,26 @@
   margin: 0;
 }
 
-/* Team Section */
-.team {
-  max-width: 700px;
+/* CTA Section */
+.cta {
+  text-align: center;
+  max-width: 500px;
   margin: 0 auto;
 }
 
-.teamIntro {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-  margin-bottom: var(--spacing-xl);
-}
-
-.team h2 {
+.ctaTitle {
   font-family: var(--font-family-display);
   font-size: var(--font-size-2xl);
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-lg);
-}
-
-.teamCard {
-  background: white;
-  padding: var(--spacing-xl);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-}
-
-.teamCard h3 {
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-xl);
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-xs);
-}
-
-.role {
-  color: var(--color-secondary);
   font-weight: 500;
-  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
 }
 
-.teamCard p {
+.ctaText {
+  font-size: var(--font-size-base);
   color: var(--color-text-secondary);
-  line-height: 1.7;
-  margin: 0;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
 }
 
 /* Sources Section */
