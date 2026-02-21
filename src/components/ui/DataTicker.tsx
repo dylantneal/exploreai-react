@@ -39,11 +39,17 @@ const DATA_FACTS: DataFact[] = [
     context: '10× larger than in 1960',
     source: 'World Bank' 
   },
-  { 
-    value: '1 in 6', 
-    label: 'species face extinction', 
-    context: 'Current rate 1,000× natural baseline',
-    source: 'IUCN' 
+  {
+    value: '28%',
+    label: 'of assessed species threatened',
+    context: 'IUCN Red List; proportion at risk of extinction',
+    source: 'IUCN'
+  },
+  {
+    value: '1,000×',
+    label: 'extinction rate vs natural baseline',
+    context: 'Current rate vs pre-human background; conservative estimate',
+    source: 'IUCN'
   },
 ];
 
